@@ -33,14 +33,14 @@ namespace MySockets
             _Sock.Listen(count);
         }
 
-        public void Bind(string input = "localhost", int port = 11000)
+        public void Bind(string input = "localhost", int port = 513)
         {
             IPEndPoint ipEndPoint = new((Dns.GetHostEntry("localhost")).AddressList[0], port);
             _Sock.Bind(ipEndPoint);
             Listen(4);
         }
 
-        public void Connect(string input = "localhost", int port = 11000)
+        public void Connect(string input = "localhost", int port = 513)
         {
             IPEndPoint ipEndPoint = new((Dns.GetHostEntry("localhost")).AddressList[0], port);
             _Sock.Connect(ipEndPoint);
